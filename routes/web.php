@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\savanController;
-use App\livres;
+use App\Livre;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,17 +16,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $livres=livres::all();
+    $livres=Livre::all();
     return view('accueil',compact("livres"));
-});
-Route::get('/index','indexController@formulaire');
+})->middleware('customAuth');
+Route::get('/index','indexController@formulaire')->middleware('customAuth');
+
 Route::get('/connexion','connexionController@vueconnexion' );
 Route::post('/connexion','connexionController@connexion' );
+
 Route::get('/inscription','inscriptioncontroller@vueinscription');
 Route::post('/inscription', 'inscriptionController@inscription');
-Route::get('/ajout','savanController@vueajout');
-Route::post('/ajout','savanController@ajout');
-Route::get('/search','searchController@recherche');
-Route::post('/search','searchController@search');
 
+Route::get('/ajout','savanController@vueajout')->middleware('customAuth');
+Route::post('/ajout','savanController@ajout')->middleware('customAuth');
+
+Route::get('/search','searchController@recherche')->middleware('customAuth');
+Route::post('/search','searchController@search')->middleware('customAuth');
+
+Route::get('/deconnexion','connexionController@deconnexion');
 

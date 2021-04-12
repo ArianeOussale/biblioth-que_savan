@@ -20,4 +20,9 @@ class connexionController extends Controller
        }
 
     }
+    public function deconnexion(){
+       Auth::guard('admin')->logout();
+       return redirect("/connexion");
+    }
+
 }

@@ -54,6 +54,7 @@
           <input type="submit" value="rechercher" id="button-blue"/>
           <div class="ease"></div>
         </div>
+        <section class="col-md-3"><button class="btn btn-dark">Retour</button></section>
       </form>
 
 

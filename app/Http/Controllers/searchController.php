@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\livres;
+use App\Livre;
 use Illuminate\Http\Request;
 
 class searchController extends Controller
@@ -16,19 +16,19 @@ class searchController extends Controller
     $count=null;
        switch ($request->filtre) {
            case 'type':
-               $search=livres::where("type","=",$request->type)->get();
+               $search=Livre::where("type","=",$request->type)->get();
                $count=count($search);
                break;
             case 'pays':
-                $search=livres::where("pays","=",$request->pays)->get();
+                $search=Livre::where("pays","=",$request->pays)->get();
                 $count=count($search);
                break;
             case 'auteur':
-                $search=livres::where("auteur","=",$request->auteur)->get();
+                $search=Livre::where("auteur","=",$request->auteur)->get();
                 $count=count($search);
                 break;
             case 'parrution':
-                $search=livres::where("parution","=",$request->parrution)->get();
+                $search=Livre::where("parution","=",$request->parrution)->get();
                 $count=count($search);
                 break;
        }

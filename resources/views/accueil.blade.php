@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset("bootstrap.min.css")}}">
     <link rel="stylesheet" href="{{asset("css.css")}}">
-    <title>Document</title>
+    <title>biblio_savan</title>
 </head>
 <body style="background: url('images/imag1.png');background-size: cover">
     <div class="container-fluid ">
         <div class="row">
-            <section class="col-md-2 d-flex flex-column justify-content-center  p-0" style="background-color:rgb(58, 34, 7)">
+            <section class="col-md-2 d-flex flex-column justify-content-center  p-0" style="background-color:rgba(221, 163, 37, 0.849)">
 
                 <ul class="p-0  ">
                     <li class="list-unstyled text-light bg-dark text-center mt-5 "><a style="text-decoration: none" class="text-light pb-3 pt-3 h-100 w-100 d-block" href="">DASHBOARD</a></li>
@@ -22,13 +22,13 @@
 
             </section>
             <section class="col-md-10  ">
-                <div class="row p-3" style="background-color: rgba(187, 139, 37, 0.849)">
-                    <h3 class="col-md-9  text-white">BIENVENU A LA BIBLIOTHEQUE LE SAVAN</h3>
-                    <section class="col-md-3"><button class="btn btn-primary">DECONNEXION</button></section>
+                <div class="row p-3" style="background-color: rgba(221, 163, 37, 0.849)">
+                 <h3 class="col-md-9  text-white"> SAVAN,le tremplein du savoir</h3>
+                <section class="col-md-3"><a href="{{url('/deconnexion')}}"   class="btn btn-dark">DECONNEXION</a></section>
                 </div>
                 <section class="row justify-content-center">
-                    <div class=" rond p-3 col-md-9  bg-white mt-5 mb-5">
-                        <h3 class="text">Liste des livres</h3>
+                    <div class=" rond p-3 col-md-10  bg-white mt-5 mb-5">
+                        <h3 class="text">Liste des livres ajoutés</h3>
                         <table class="table table-responsive m-3">
                             <thead>
                                 <tr>
@@ -37,7 +37,8 @@
                                     <th>Publication</th>
                                     <th>Type</th>
                                     <th>Pays</th>
-                                    <th>Action</th>
+                                    <th>Actions</th>
+
                                 </tr>
                             </thead>
                             <tbody>
