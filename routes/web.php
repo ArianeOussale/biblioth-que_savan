@@ -27,11 +27,18 @@ Route::post('/connexion','connexionController@connexion' );
 Route::get('/inscription','inscriptioncontroller@vueinscription');
 Route::post('/inscription', 'inscriptionController@inscription');
 
-Route::get('/ajout','savanController@vueajout')->middleware('customAuth');
+Route::get('ajout', [savanController::class, 'vueajout']);
+
+//Route::get('/ajout','savanController@vueajout')->middleware('customAuth');
 Route::post('/ajout','savanController@ajout')->middleware('customAuth');
 
 Route::get('/search','searchController@recherche')->middleware('customAuth');
 Route::post('/search','searchController@search')->middleware('customAuth');
 
 Route::get('/deconnexion','connexionController@deconnexion');
+
+
+
+Route::get('/pays','indexController@pays');
+
 

@@ -1,23 +1,5 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset("bootstrap.min.css")}}">
-    <link rel="stylesheet" href="{{asset("css.css")}}">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
-</html>
-<div class="container-fluid">
-    <h1 class="text-center text-white" >BIBLIOTHEQUE SAVAN</h1>
-</div>
-
-
+@extends('socle',["lien"=>"images/bib5.jpg"])
+@section("contenu")
 <div id="form-main" >
 
     <div id="form-div">
@@ -36,12 +18,26 @@
             <select name="type"class="validate[required,custom[type de livre]] feedback-input" id="type de livre" placeholder="type de livre" id="">
                 <option value="Romantique">Romantique</option>
                 <option value="Poétique">Poétique</option>
+                <option value="Pathétique">pathétique</option>
+                <option value="Naratif">naratif</option>
+                <option value="Comique">comique</option>
+                <option value="Théatral">théatrale</option>
+                <option value="Réaliste">réaliste</option>
+                <option value="Dramatique">dramatique</option>
+                <option value="Informatif">informatif</option>
             </select>
           </p>
           <p class="name">
             <select name="pays"class="validate[required,custom[type de livre]] feedback-input" id="type de livre" placeholder="type de livre" id="">
-                <option value="Burkina Faso">Burkina</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Cote d'Ivoire">Cote d'Ivoire</option>
                 <option value="France">France</option>
+                <option value="Nigéria">Nigéria</option>
+                <option value="Niger">Niger</option>
+                <option value="Togo">Togo</option>
+                <option value="Bénin">Bénin</option>
+                <option value="Etat-unis">Etat-Unis</option>
+                <option value="Mali">Mali</option>
             </select>
           </p>
         <p class="password">
@@ -60,3 +56,6 @@
 
 
     </div>
+</div>
+@endsection
+

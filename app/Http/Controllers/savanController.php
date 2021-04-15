@@ -9,6 +9,7 @@ class savanController extends Controller
     public function vueajout(){
         return view('ajouter');
     }
+
     public function ajout(Request $request){
         $utilisateur = new Livre();
        $utilisateur->nom=$request->nom;

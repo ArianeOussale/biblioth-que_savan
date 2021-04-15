@@ -1,20 +1,7 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset("bootstrap.min.css")}}">
-    <link rel="stylesheet" href="{{asset("css.css")}}">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
-</html>
+@extends("socle",["lien"=>"images/imag1.png"])
+@section("contenu")
 <div class="container-fluid">
-    <h1 class="text-center text-white" >{{$count}} Resultats</h1>
+    <h1 class="text-center text-white" >{{$count}} Livre(s)</h1>
 </div>
 
 
@@ -24,7 +11,7 @@
         <table class="table table-light">
             <thead>
                 <tr>
-                    <th>Nom</th>
+
                     <th>Auteur</th>
                     <th>Publication</th>
                     <th>Type</th>
@@ -34,7 +21,7 @@
             <tbody>
                 @foreach ($search as $search)
                    <tr>
-                       <td>{{$search->nom}}</td>
+
                        <td>{{$search->auteur}}</td>
                        <td>{{$search->parrution}}</td>
                        <td>{{$search->type}}</td>
@@ -44,3 +31,5 @@
             </tbody>
         </table>
 </div>
+@endsection
+
